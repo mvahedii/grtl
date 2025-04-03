@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Grok RTL",
+  "version": "1.0",
+  "description": "Changes text direction to RTL on grok.com for any of RTL texts",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.grok.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
